@@ -1,6 +1,5 @@
 name: Linters
 description: "Using yamllint and ruff to check my code"
-author: Jerson Vasquez
 
 on:
   push:
