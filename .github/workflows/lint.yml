@@ -1,0 +1,29 @@
+name: Linters
+description: "Using yamllint and ruff to check my code"
+author: Jerson Vasquez
+
+on:
+  push:
+
+jobs:
+  lint-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run yamllint
+        run: yamllint docker/
+
+  lint-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.12'
+      - name: Install dependencies
+        run: pip install ruff
+      - name: Run ruff
+        run: ruff check .
