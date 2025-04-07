@@ -1,0 +1,14 @@
+---
+
+name: Pull Request
+description: 'Sample of a GitHub Action to run during a pull request'
+
+on:
+  pull_request
+
+jobs:
+  pull_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Requested
+        run: echo A pull request was made
