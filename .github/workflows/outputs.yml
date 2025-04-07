@@ -1,7 +1,7 @@
 ---
 
-name: OS Info
-description: "Running a job to get OS information"
+name: Outputs
+description: "GHA to use step outputs"
 
 on:
   [push, workflow_dispatch]

@@ -1,7 +1,7 @@
 ---
 
-name: GitHub Actions Ignore Branch Template
-description: "Generic layout for a GitHub Action to ignore a branch"
+name: GHA Ignore Branch
+description: "Generic layout for a GitHub Action to ignore a specific branch"
 
 on:
   push:

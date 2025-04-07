@@ -1,7 +1,7 @@
 ---
 
-name: GitHub Actions Branch Template
-description: "Generic layout for a GitHub Action on a branch"
+name: GHA Specific Branch Only
+description: "Generic layout for a GitHub Action on a specific branch"
 
 on:
   push:
