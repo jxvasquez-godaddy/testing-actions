@@ -1,0 +1,16 @@
+---
+
+name: GHA Ignore Branch
+description: "Generic layout for a GitHub Action to ignore a specific branch"
+
+on:
+  push:
+    branches-ignore:
+      - 'jv**'
+
+jobs:
+  some-unique-job-name-here:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First Task Name Here
+        run: echo This should not have exexuted for JV branches
