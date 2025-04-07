@@ -4,7 +4,7 @@ name: GitHub Actions Branch Template
 description: "Generic layout for a GitHub Action on a branch"
 
 on:
-  push
+  push:
     branches:
       - 'jv[-_]**'
 
