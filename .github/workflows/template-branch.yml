@@ -1,0 +1,16 @@
+---
+
+name: GitHub Actions Branch Template
+description: "Generic layout for a GitHub Action on a branch"
+
+on:
+  push
+    branches:
+      - jv[-_]**
+
+jobs:
+  some-unique-job-name-here:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First Task Name Here
+        run: echo This is a branch template
