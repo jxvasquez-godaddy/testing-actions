@@ -1,0 +1,27 @@
+---
+
+name: OS Info
+description: "Running a job to get OS information"
+
+on:
+  [push, workflow_dispatch]
+
+jobs:
+  get_inputs:
+    runs-on: ubuntu-latest
+    outputs:
+      osname: ${{ steps.codename.outputs.oscode }}
+      kernelver: ${{ steps.kerver.outputs.kver }}
+    steps:
+      - id: codename
+        run: echo "oscode=$(lsb_release -c | cut -f2-)" >> $GITHUB_OUTPUT
+      - id: kerver
+        run: echo "kver=$(uname -r)" >> $GITHUB_OUTPUT
+  show_outputs:
+    runs-on: ubuntu-latest
+    needs: get_inputs
+    steps:
+      - name: Print OS Information
+        run: |
+          echo "Codename: ${{ needs.get_inputs.outputs.osname }}"
+          echo "Kernel Version: ${{ needs.get_inputs.outputs.kernelver }}"
