@@ -1,0 +1,14 @@
+---
+
+name: GitHub Actions Template
+description: "Generic layout for a GitHub Action"
+
+on:
+  push
+
+jobs:
+  some-unique-job-name-here:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First Task Name Here
+        run: echo This is a template
