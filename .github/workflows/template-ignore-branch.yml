@@ -5,8 +5,8 @@ description: "Generic layout for a GitHub Action to ignore a branch"
 
 on:
   push:
-    branches:
-      - '!jv[-_]**'
+    branches-ignore:
+      - 'jv**'
 
 jobs:
   some-unique-job-name-here:

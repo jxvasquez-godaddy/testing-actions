@@ -6,7 +6,7 @@ description: "Generic layout for a GitHub Action on a branch"
 on:
   push:
     branches:
-      - 'jv[-_]**'
+      - 'jv**'
 
 jobs:
   some-unique-job-name-here:
