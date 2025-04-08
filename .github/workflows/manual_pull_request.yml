@@ -1,0 +1,14 @@
+---
+
+name: Manual Pull Request
+description: "GitHub Action only triggered manually or by PR"
+
+on:
+  [pull_request, workflow_dispatch]
+
+jobs:
+  manual_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Manual Pull Request
+        run: echo This is a manual pull request workflow
