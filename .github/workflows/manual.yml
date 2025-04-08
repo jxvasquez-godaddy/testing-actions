@@ -1,0 +1,14 @@
+---
+
+name: Manual
+description: 'Manually trigger a GitHub Actions workflow'
+
+on:
+  workflow_dispatch
+
+jobs:
+  manual_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: manual_run
+        run: echo "This job was triggered manually."
